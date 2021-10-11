@@ -1,5 +1,106 @@
 /* CSS Demo Stylesheet */
 
-body {
-    background-color: #008000;
+/* ---------------Box Sizing----------------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ---------------Global Styles----------------- */
+
+body{
+  background-color:#c0c0c0;
+  font-family: 'Lato', sans-serif;
+  margin:0;
+}
+
+header.primary {
+background-color:#3b638b;
+text-align:center;
+color:#ffffff;
+/* Long Form */  
+padding-top:40px;
+padding-right:40px;
+padding-bottom:20px;
+padding-left:40px;  
+/* T,R,B,L */ 
+padding:40px 40px 20px 40px;  
+/* Top/Bottom  Right/Left */
+padding: 20px 40px; 
+text-shadow:2px 2px #000000;
+}
+header.primary h1{
+  font-size:2.8rem;
+  margin:20px 0;
+}
+
+header.primary h1 a{
+  color:#ffffff;
+  text-decoration:none;
+}
+
+header.primary h2{
+  font-size:1.4rem;
+  /* Top | Left/Right | Bottom */
+  margin:20px auto 40px;
+}
+
+header.primary nav{
+  width:80vw;
+  margin:20px auto;
+  max-width:900px;
+}
+
+header.primary nav ul{
+  padding:0;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+header.primary nav li{
+list-style-type:none;
+}
+header.primary nav a{
+  color:#ffffff;
+  text-decoration:none;
+  background-color:#000000;
+  background-color:rgba(0,0,0,.4);
+  padding: 8px 16px;
+  border-radius:20px;
+  transition:.5s;
+}
+
+header nav a:hover, header nav a:active{
+  background-color:rgba(0,0,0,.8);
+}
+
+
+
+
+
+
+
+
+/* Media Query Example */
+
+@media screen and (max-width:700px) {
+  
+  header.primary nav ul{
+    flex-direction:column;
+    max-width:70vw;
+    margin:auto;
+  }
+  
+  header.primary nav a{
+    display:block;
+  }
+  
+  header.primary nav li{
+    margin-bottom:10px;
+  }
 }
